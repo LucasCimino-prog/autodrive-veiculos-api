@@ -1,0 +1,42 @@
+### É necessário mudar a placa para cadastrar outro veiculo
+### Cadastrar Veículo
+POST http://localhost:8080/api/veiculos
+Content-Type: application/json
+
+{
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "anoFabricacao": 2025,
+  "anoModelo": 2026,
+  "placa": "ABC-4321",
+  "preco": 145000.00,
+  "cor": "Prata",
+  "disponivel": true
+}
+
+### Listar Todos os Veículos
+GET http://localhost:8080/api/veiculos
+Accept: application/json
+
+### O ultimo numero representa o id do veiculo
+### Buscar Veículo por ID
+GET http://localhost:8080/api/veiculos/6
+Accept: application/json
+
+### Atualizar Veículo
+PUT http://localhost:8080/api/veiculos/3
+Content-Type: application/json
+
+{
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "anoFabricacao": 2025,
+  "anoModelo": 2026,
+  "placa": "ABC-1234",
+  "preco": 140000.00,
+  "cor": "Prata",
+  "disponivel": false
+}
+
+### Excluir Veículo
+DELETE http://localhost:8080/api/veiculos/3
